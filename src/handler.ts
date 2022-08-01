@@ -77,6 +77,9 @@ export async function handlePullRequest(
 
   if (filterLabels !== undefined) {
     if (filterLabels.include !== undefined && filterLabels.include.length > 0) {
+      core.info(`PR instance ${JSON.stringify(pr)}`)
+      core.info(`lables to include ${JSON.stringify(filterLabels.include)}`)
+      core.info(`context ${JSON.stringify(context)}`)
       const hasLabels = pr.hasAnyLabel(filterLabels.include)
       if (!hasLabels) {
         core.info(
