@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/kentaro-m/auto-assign-action.git"
   },
-  "main": "lib/main.js",
+  "main": "lib/index.js",
   "scripts": {
     "build": "tsc",
     "test": "jest",
