@@ -83,7 +83,13 @@ export async function handlePullRequest(
       const hasLabels = pr.hasAnyLabel(filterLabels.include)
       if (!hasLabels) {
         core.info(
-          `PR instance ${JSON.stringify(pr)} | lables to include ${JSON.stringify(filterLabels.include)} | context ${JSON.stringify(context)} | Skips the process to add reviewers/assignees since PR is not tagged with any of the filterLabels.include`
+          `PR instance ${JSON.stringify(
+            pr
+          )} | lables to include ${JSON.stringify(
+            filterLabels.include
+          )} | context ${JSON.stringify(
+            context
+          )} | Skips the process to add reviewers/assignees since PR is not tagged with any of the filterLabels.include`
         )
         return
       }
